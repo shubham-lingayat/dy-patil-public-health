@@ -1,19 +1,73 @@
-import React from "react";
+import React, {useEffect} from "react";
+import Slider from 'react-slick';
 
 function Home() {
   const url = process.env.REACT_APP_URL || "#";
+
+  // For Background Image
+  useEffect(() => {
+    document.querySelectorAll('[data-bgimg]').forEach((element) => {
+      const bgImage = element.getAttribute('data-bgimg');
+      if (bgImage) {
+        element.style.backgroundImage = `url(${bgImage})`;
+      }
+    });
+  }, []);
+
+  // Gallery
+  const gallery = [1,2,3,4,5,6];
+ 
+  // placement_01
+  const placement_01 = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    draggable: true,
+    swipe: true,
+    swipeToSlide: true,
+    dots: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
+
+  
   return (
     <div>
       
         <div className="container-fluid h_nav sticky-top">
-    {/* <!-- <div className="d-lg-grid d-none pb-3 border-bottom">
-        <button className="btn c_btn fw-normal  hide-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Admission Open for 2025-26</button>
-    </div> --> */}
     <div className="container">
       <nav className="navbar navbar-expand-lg  navbar-light">
         <a href="" className="navbar-brand">
           <img src={`${url}images/dypatil/logo/3.webp`} className="hero_logo_01" loading="lazy" alt=""/>
-          <img src="src/images/dypatil/logo/naac.webp" className="hero_logo_02" loading="lazy" alt=""/>
+          <img src={`${url}images/dypatil/logo/naac.webp`} className="hero_logo_02" loading="lazy" alt=""/>
         </a>
         <a href="" className="btn c_btn fw-normal btn_font d-lg-none" data-bs-toggle="modal"
           data-bs-target="#exampleModal">Enquire Now</a>
@@ -49,7 +103,7 @@ function Home() {
         <div className="row pe-lg-0">
           <div className="col-lg-8">
             <div className="position-relative">
-              <img src="../src/images/dypatil/hero/1.png" className="w-100 rounded-3 border video_height" alt=""/>
+              <img src={`${url}images/dypatil/hero/1.png`} className="w-100 rounded-3 border video_height" alt=""/>
             </div>
 
           </div>
@@ -57,8 +111,8 @@ function Home() {
             <div className="border rounded-3 text-center pt-3">
               <div className="about_logo d-none">
                 <img src={`${url}images/dypatil/logo/3.webp`} height="50" loading="lazy" alt=""/>
-                <img src="src/images/dypatil/logo/3.webp" height="50" loading="lazy" alt=""/>
-                <img src="src/images/dypatil/logo/naac.webp" height="15" loading="lazy" alt=""/>
+                <img src={`${url}images/dypatil/logo/3.webp`} height="50" loading="lazy" alt=""/>
+                <img src={`${url}images/dypatil/logo/naac.webp`} height="15" loading="lazy" alt=""/>
               </div>
               <h6 className=" mt-2 py-1">Admissions Open 2025</h6>
               <iframe aria-label='DY PATIL NAVI MUMBAI 2025 - Public Health' frameborder="0" className="zoho_form"
@@ -75,7 +129,7 @@ function Home() {
       <div className="container">
         <div className="row ">
           <div className="position-relative">
-            <img src="src/images/dypatil/hero/1.png" className="w-100 rounded-3 border video_height" alt=""/>
+            <img src={`${url}images/dypatil/hero/1.png`} className="w-100 rounded-3 border video_height" alt=""/>
 
           </div>
         </div>
@@ -88,7 +142,7 @@ function Home() {
       <div className="container d-none d-lg-block">
         <div className="row">
           <div className="col-md-12 text-center">
-            <img src="src/images/dypatil/heading/1.png" height="30px" alt=""/>
+            <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
             <h2 className=" title_01 pro_01 ">Our Programs </h2>
           </div>
           <div className="col-md-12 ">
@@ -527,7 +581,7 @@ function Home() {
               <div className="px-lg-5 px-3 d-flex justify-content-between align-items-center py-3">
                 <h6 className=" mb-0">Globally relevant curriculum </h6>
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/1.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/1.png`} className="filter" alt=""/>
                 </div>
               </div>
             </div>
@@ -535,7 +589,7 @@ function Home() {
               <div className="px-lg-5 px-3 d-flex justify-content-between align-items-center py-3">
                 <h6 className=" mb-0">Multi & Interdisciplinary in nature </h6>
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/2.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/2.png`} className="filter" alt=""/>
                 </div>
               </div>
             </div>
@@ -543,7 +597,7 @@ function Home() {
               <div className="px-lg-5 px-3 d-flex justify-content-between align-items-center py-3">
                 <h6 className=" mb-0">Technology enabled learning </h6>
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/3.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/3.png`} className="filter" alt=""/>
                 </div>
               </div>
             </div>
@@ -551,19 +605,19 @@ function Home() {
               <div className="px-lg-5 px-3 d-flex justify-content-between align-items-center py-3">
                 <h6 className=" mb-0">Field Exposure </h6>
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/4.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/4.png`} className="filter" alt=""/>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-lg-2 text-center">
-            {/* <!-- <img src="src/images/dypatil/why/01.png" className="why_ph_img" alt=""/> --> */}
+            {/* <!-- <img src={`${url}images/dypatil/why/01.png`} className="why_ph_img" alt=""/> --> */}
           </div>
           <div className="col-lg-5 pt-4 pt-lg-0">
             <div className="border why_02 position-relative mb-3">
               <div className="ps-lg-5 px-3 d-flex align-items-center py-3">
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/5.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/5.png`} className="filter" alt=""/>
                 </div>
                 <h6 className="ps-3 mb-0">Holistic learning experience </h6>
               </div>
@@ -571,7 +625,7 @@ function Home() {
             <div className="border why_02 position-relative mb-3">
               <div className="ps-lg-5 px-3 d-flex align-items-center py-3">
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/6.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/6.png`} className="filter" alt=""/>
                 </div>
                 <h6 className="ps-3 mb-0">Subscription to online learning portals </h6>
               </div>
@@ -579,7 +633,7 @@ function Home() {
             <div className="border why_02 position-relative mb-3">
               <div className="ps-lg-5 px-3 d-flex align-items-center py-3">
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/7.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/7.png`} className="filter" alt=""/>
                 </div>
                 <h6 className="ps-3 mb-0">Student driven activities </h6>
               </div>
@@ -587,7 +641,7 @@ function Home() {
             <div className="border why_02 position-relative mb-3">
               <div className="ps-lg-5 px-3 d-flex align-items-center py-3">
                 <div className=" p-2 choose_us_sect position-relative">
-                  <img src="src/images/dypatil/why/8.png" className="filter" alt=""/>
+                  <img src={`${url}images/dypatil/why/8.png`} className="filter" alt=""/>
                 </div>
                 <h6 className="ps-3 mb-0">Collaborate and Work with Reputed Organisations</h6>
               </div>
@@ -605,55 +659,55 @@ function Home() {
       <div className="container bg-white rounded-3 pt-5 " id="recruiters">
         <div className="row  justify-content-center">
           <div className="col-lg-9 text-center">
-            <img src="src/images/dypatil/heading/1.png" height="30px" alt=""/>
+            <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
             <h2 className="title_01 text-center">Our Recruiters</h2>
           </div>
         </div>
-        <div
-          className="row placement_01 ms-1 me-2 mx-lg-auto py-lg-2 owl-carousel justify-content-center text-center border">
+        <Slider  
+          className="row placement_01 ms-1 me-2 mx-lg-auto py-lg-2 justify-content-center text-center border" {...placement_01}>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/1.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/1.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/2.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/2.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/3.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/3.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/4.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/4.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/5.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/5.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/6.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/6.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/7.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/7.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/8.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/8.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/9.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/9.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/10.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/10.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/11.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/11.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/12.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/12.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/13.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/13.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/new/14.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+            <img src={`${url}images/dypatil/placement/new/14.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
           </div>
-        </div>
+        </Slider>
       </div>
     </section>
     {/* <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -717,31 +771,31 @@ function Home() {
               <hr className="industryhr"/>
               <div className="row gy-4 industryimages gy-4">
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/1.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/1.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/2.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/2.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/3.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/3.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/4.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/4.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/5.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/5.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/6.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/6.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/7.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/7.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/8.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/8.png`} className=""/>
                 </div>
                 <div className="col-lg-4 col-4">
-                  <img src="src/images/dypatil/industryscope/9.png" className=""/>
+                  <img src={`${url}images/dypatil/industryscope/9.png`} className=""/>
                 </div>
               </div>
             </div>
@@ -755,13 +809,13 @@ function Home() {
       <div className="container" id="team">
         <div className="row justify-content-lg-between">
           <div className="col-lg-12  text-center">
-            <img src="src/images/dypatil/heading/1.png" height="30px" alt=""/>
+            <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
             <h2 className="title_01   mb-3">Meet Our Expert Advisory Members</h2>
           </div>
         </div>
         <div className="row pt-3 team bg-white owl-carousel ">
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/1.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/1.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">DR. SUMA NAIR</h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER SECRETARY </b> <br/>dean, dypu school
@@ -769,7 +823,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/2.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/2.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">DR. DEEPAK SAXENA</h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER </b> <br/>director, iiph gandhinagar
@@ -777,7 +831,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/3.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/3.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">PROF. DR. SANJAY ZODPEY</h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>CO-CHAIRPERSON </b> <br/>president, public
@@ -785,7 +839,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/4.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/4.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">DR. H. VINOD BHAT</h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>CO-CHAIRPERSON </b> <br/>vice chancellor,
@@ -793,7 +847,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/5.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/5.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">DR. NITIKA PANT PAI</h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER </b> <br/>associate
@@ -801,7 +855,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/6.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/6.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">Dr. Madhukar Pai </h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Associate Director, McGill
@@ -809,7 +863,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/7.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/7.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">Dr. N. Sreekumaran Nair </h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Professor & Head, Department
@@ -817,7 +871,7 @@ function Home() {
             </div>
           </div>
           <div className="card d-grid">
-            <img src="src/images/dypatil/team/8.webp" className="team_img" alt="..."/>
+            <img src={`${url}images/dypatil/team/8.webp`} className="team_img" alt="..."/>
             <div className="card-body text-center">
               <h5 className="card-title text-white ">Dr. B. Unnikrishnan </h5>
               <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Dean, Kasturba Medical
@@ -853,25 +907,25 @@ function Home() {
         <div className="row inrernshipdiv p-4">
           <div className="col-lg-3">
             <div className="internship-box side-by-side internship-devider internmg">
-              <img src="src/images/dypatil/internship/1.png" height="70px" alt=""/>
+              <img src={`${url}images/dypatil/internship/1.png`} height="70px" alt=""/>
               <h2>Law firms</h2>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="internship-box side-by-side internship-devider internmg">
-              <img src="src/images/dypatil/internship/2.png" height="70px" alt=""/>
+              <img src={`${url}images/dypatil/internship/2.png`} height="70px" alt=""/>
               <h2>Corporate legal departments</h2>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="internship-box side-by-side internship-devider internmg">
-              <img src="src/images/dypatil/internship/3.png" height="70px" alt=""/>
+              <img src={`${url}images/dypatil/internship/3.png`} height="70px" alt=""/>
               <h2>Non-profit organizations</h2>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="internship-box side-by-side internmg">
-              <img src="src/images/dypatil/internship/4.png" height="70px" alt=""/>
+              <img src={`${url}images/dypatil/internship/4.png`} height="70px" alt=""/>
               <h2>Government agencies</h2>
             </div>
           </div>
@@ -885,54 +939,54 @@ function Home() {
       <div className="container bg-white rounded-3 pb-5 " id="">
         <div className="row  justify-content-center">
           <div className="col-lg-9 text-center">
-            <img src="src/images/dypatil/heading/1.png" height="30px" alt=""/>
+            <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
             <h2 className="title_01 text-center">International Collaboration</h2>
           </div>
         </div>
         <div
           className="row placement_01 ms-1 me-2 mx-lg-auto py-lg-2 owl-carousel justify-content-center text-center border">
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/1.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/1.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/2.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/2.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/3.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/3.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/4.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/4.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/5.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/5.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/6.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/6.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/7.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/7.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/8.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/8.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/9.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/9.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/10.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/10.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
           <div className=" company_01 border-end ">
-            <img src="src/images/dypatil/placement/international/11.png" loading="lazy" className="px-3"
+            <img src={`${url}images/dypatil/placement/international/11.png`} loading="lazy" className="px-3"
               alt="International Collaboration"/>
           </div>
         </div>
@@ -948,49 +1002,49 @@ function Home() {
         <div className="row placement_01 py-lg-2 owl-carousel justify-content-center text-center align-items-stretch">
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/1.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/1.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>NAAC A++ Accredited University</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/2.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/2.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>QS International Trade Ranking (2023): #121-130 globally!</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/3.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/3.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>UGC Recognized</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/4.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/4.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>AICTE Approved</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/5.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/5.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>Ranked Amongst Top 100 Universities in India by NIRF</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/6.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/6.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>1st Rank in India by GHRDC</p>
             </div>
           </div>
           <div className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
-              <img src="src/images/dypatil/awards/7.webp" loading="lazy" className="px-3" alt="Placement Companies"/>
+              <img src={`${url}images/dypatil/awards/7.webp`} loading="lazy" className="px-3" alt="Placement Companies"/>
               <hr/>
               <p>Recognised as Category 1 University by MHRD</p>
             </div>
@@ -1019,7 +1073,7 @@ function Home() {
           <div className="col-md-8 owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
             <div className="row align-items-stretch">
               <div className="testimonial-item rounded align-items-stretch p-4 p-lg-5 mb-5">
-                <img className="mb-4" src="src/images/dypatil/testimonal/1.png" alt=""/>
+                <img className="mb-4" src={`${url}images/dypatil/testimonal/1.png`} alt=""/>
                 <h5>Dr.Kiran Gaikwad</h5>
                 <span className="">I feel extremely proud to be a student of the School of Public Health, D Y Patil Deemed
                   to be University, Navi Mumbai, for it is this institution which gave me a golden chance to pursue and
@@ -1028,7 +1082,7 @@ function Home() {
             </div>
             <div className="row align-items-stretch">
               <div className="testimonial-item rounded align-items-stretch p-4 p-lg-5 mb-5">
-                <img className="mb-4" src="src/images/dypatil/testimonal/2.png" alt=""/>
+                <img className="mb-4" src={`${url}images/dypatil/testimonal/2.png`} alt=""/>
                 <h5>Dr. Pooja Chavan Jangir</h5>
                 <span className="">My time at DYPU School of Public Health was a profound journey of growth and discovery.
                   The rigorous academic curriculum, coupled with hands-on field experiences, equipped me with invaluable
@@ -1048,7 +1102,7 @@ function Home() {
     <section className="bg-white pt-lg-1 pt-5">
       <div className="container" id="campuslife">
         <div className="col-md-12 text-center position-relative">
-          <img src="src/images/dypatil/heading/1.png" height="30px" alt=""/>
+          <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
           <h2 className=" fw-normal mb-4 text-center  display-5 title_02  d-none d-md-block">#CampusLife@
             <span className="text-red"> D Y
               Patil University</span></h2>
@@ -1059,25 +1113,11 @@ function Home() {
         </div>
 
         <div className="row gy-4 galleryimages ">
-
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/1.webp`} className=""/>
-          </div>
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/2.webp`} className=""/>
-          </div>
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/3.webp`} className=""/>
-          </div>
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/4.webp`} className=""/>
-          </div>
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/5.webp`} className=""/>
-          </div>
-          <div className="col-lg-4 col-6 ">
-            <img src={`${url}/images/dypatil/gallery/6.webp`} className=""/>
-          </div>
+        {gallery.map((index) => (
+            <div key={index} className="col-lg-4 col-6">
+              <img src={`${url}/images/dypatil/gallery/${index}.webp`} className="" alt={`Gallery ${index}`} />
+            </div>
+          ))}
         </div>
         </div>
     </section>
@@ -1112,9 +1152,9 @@ function Home() {
           <div className="row">
             <div className="col-md-12 text-center">
               <div className="d-flex justify-content-center align-items-center py-3">
-                <img src="src/images/dypatil/logo/4.webp" className="hero_logo_01" loading="lazy" alt=""/>
+                <img src={`${url}images/dypatil/logo/4.webp`} className="hero_logo_01" loading="lazy" alt=""/>
                 <div className="footerImgDivider"></div>
-                <img src="src/images/dypatil/logo/naac-footer.webp" className="footer_logo_02" loading="lazy" alt=""/>
+                <img src={`${url}images/dypatil/logo/naac-footer.webp`} className="footer_logo_02" loading="lazy" alt=""/>
               </div>
               {/* <!-- <div className="py-2">
                         <p className="textBrown1">Address:</p>
@@ -1123,7 +1163,7 @@ function Home() {
               <div className="footerDivider"></div>
               <span className=" text-light">© Copyright 2025 | D Y Patil University, Navi Mumbai. | Designed and developed
                 by
-                <img src="src/images/dypatil/logo/gladowl_logo.webp" height="20" width="auto" loading="lazy" alt=""/></span>
+                <img src={`${url}images/dypatil/logo/gladowl_logo.webp`} height="20" width="auto" loading="lazy" alt=""/></span>
             </div>
           </div>
         </div>
@@ -1145,8 +1185,8 @@ function Home() {
         <div className="modal-content ">
           <div className="modal-header">
             <div className="about_logo pb-2">
-              <img src="src/images/dypatil/logo/3.webp" height="50" loading="lazy" alt=""/>
-              <img src="src/images/dypatil/logo/naac.webp" height="15" loading="lazy" alt=""/>
+              <img src={`${url}images/dypatil/logo/3.webp`} height="50" loading="lazy" alt=""/>
+              <img src={`${url}images/dypatil/logo/naac.webp`} height="15" loading="lazy" alt=""/>
             </div>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
