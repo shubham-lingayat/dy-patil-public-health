@@ -1,7 +1,31 @@
 import React from 'react';
+import Slider from 'react-slick';
 
 function SuccessStories(){
     const url = process.env.REACT_APP_URL || "#";
+
+    const testimonial_01 = {
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 500,
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      draggable: true,
+      swipe: true,
+      swipeToSlide: true,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    };
+
     return(
     <section className="pt-5 " id="success-stories">
         <div className="container wow fadeInUp" data-wow-delay="0.1s">
@@ -16,7 +40,7 @@ function SuccessStories(){
                 <h2 className="title_01 text-red text-center">OUR <span className="text-dark"> SUCCESS STORIES</span></h2>
               </div>
             </div>
-            <div className="col-md-8 owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <Slider className="col-md-8 owl-carousel testimonial-carousel wow fadeInUp testimonial_01" data-wow-delay="0.1s" {...testimonial_01}>
               <div className="row align-items-stretch">
                 <div className="testimonial-item rounded align-items-stretch p-4 p-lg-5 mb-5">
                   <img className="mb-4" src={`${url}images/dypatil/testimonal/1.png`} alt=""/>
@@ -35,7 +59,7 @@ function SuccessStories(){
                     skills that seamlessly translated into my current job.</span>
                 </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </section>

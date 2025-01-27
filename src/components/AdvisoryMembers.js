@@ -1,85 +1,119 @@
-import React from 'react';
+import React from "react";
+import Slider from "react-slick";
 
-function AdvisoryMembers(){
-    const url = process.env.REACT_APP_URL || "#";
-    return(
-        <section className="bg-white py-5 pt_001">
-            <div className="container" id="team">
-                <div className="row justify-content-lg-between">
-                <div className="col-lg-12  text-center">
-                    <img src={`${url}images/dypatil/heading/1.png`} height="30px" alt=""/>
-                    <h2 className="title_01   mb-3">Meet Our Expert Advisory Members</h2>
-                </div>
-                </div>
-                <div className="row pt-3 team bg-white owl-carousel ">
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/1.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">DR. SUMA NAIR</h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER SECRETARY </b> <br/>dean, dypu school
-                        of public health</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/2.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">DR. DEEPAK SAXENA</h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER </b> <br/>director, iiph gandhinagar
-                    </p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/3.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">PROF. DR. SANJAY ZODPEY</h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>CO-CHAIRPERSON </b> <br/>president, public
-                        health foundation of india (phfi)</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/4.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">DR. H. VINOD BHAT</h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>CO-CHAIRPERSON </b> <br/>vice chancellor,
-                        apollo university, chittoor</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/5.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">DR. NITIKA PANT PAI</h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>MEMBER </b> <br/>associate
-                        professor,department of medicine, mcgill university, canada</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/6.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">Dr. Madhukar Pai </h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Associate Director, McGill
-                        International TB Centre, McGill University, Canada</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/7.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">Dr. N. Sreekumaran Nair </h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Professor & Head, Department
-                        of Biostatistics, Jipmer, Puducherry</p>
-                    </div>
-                </div>
-                <div className="card d-grid">
-                    <img src={`${url}images/dypatil/team/8.webp`} className="team_img" alt="..."/>
-                    <div className="card-body text-center">
-                    <h5 className="card-title text-white ">Dr. B. Unnikrishnan </h5>
-                    <p className="card-text text-white fw-normal text-capitalize"><b>Member</b> <br/>Dean, Kasturba Medical
-                        College, Mangalore</p>
-                    </div>
-                </div>
+function AdvisoryMembers() {
+  const url = process.env.REACT_APP_URL || "#";
 
-                </div>
+  const members = [
+    ["DR. SUMA NAIR", "MEMBER SECRETARY", "dean, dypu school of public health"],
+    ["DR. DEEPAK SAXENA", "MEMBER", "director, iiph gandhinagar"],
+    [
+      "PROF. DR. SANJAY ZODPEY",
+      "CO-CHAIRPERSON",
+      "president, public health foundation of india (phfi)",
+    ],
+    [
+      "DR. H. VINOD BHAT",
+      "CO-CHAIRPERSON",
+      "vice chancellor, apollo university, chittoor",
+    ],
+    [
+      "DR. NITIKA PANT PAI",
+      "MEMBER",
+      "associate professor,department of medicine, mcgill university, canada",
+    ],
+    [
+      "Dr. Madhukar Pai",
+      "Member",
+      "Associate Director, McGill International TB Centre, McGill University, Canada",
+    ],
+    [
+      "Dr. N. Sreekumaran Nair",
+      "Member",
+      "Professor & Head, Department of Biostatistics, Jipmer, Puducherry",
+    ],
+    [
+      "Dr. B. Unnikrishnan",
+      "Member",
+      "Dean, Kasturba Medical College, Mangalore",
+    ],
+  ];
+
+  const members_01 = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: true,
+    swipe: true,
+    swipeToSlide: true,
+    dots: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 0,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <section className="bg-white py-5 pt_001">
+      <div className="container" id="team">
+        <div className="row justify-content-lg-between">
+          <div className="col-lg-12  text-center">
+            <img
+              src={`${url}images/dypatil/heading/1.png`}
+              height="30px"
+              alt=""
+            />
+            <h2 className="title_01 mb-3">Meet Our Expert Advisory Members</h2>
+          </div>
+        </div>
+        <Slider className="members_01 row pt-3 team bg-white" {...members_01}>
+          {/* Map Function START */}
+          {members.map((member, index) => (
+            <div key={index} className="card d-grid">
+              <img
+                src={`${url}images/dypatil/team/${index}.webp`}
+                className="team_img"
+                alt={`${member[0]}`}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title text-white ">{member[0]}</h5>
+                <p className="card-text text-white fw-normal text-capitalize">
+                  <b>{member[1]}</b> <br />
+                  {member[2]}
+                </p>
+              </div>
             </div>
-        </section>
-    );
+          ))}
+          {/* Map Function END */}
+        </Slider>
+      </div>
+    </section>
+  );
 }
 export default AdvisoryMembers;
