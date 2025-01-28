@@ -1,5 +1,5 @@
 /* write your css here */
-/* @import "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"; */
+@import "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 
 .poppins-thin {
   font-family: "Poppins", serif;
@@ -127,11 +127,11 @@
 }
 
 body {
-  font-size: 14px;
-  font-family: var(--gotham);
-  color: var(--dark);
-  background-color: #fff;
-  font-display: swap;
+  font-size: 14px !important;
+  font-family: var(--gotham) !important;
+  color: var(--dark) !important;
+  background-color: #fff !important;
+  font-display: swap !important;
 }
 
 h1,
@@ -238,8 +238,8 @@ h6,
 }
 
 .btn {
-  transition: 0.5s;
-  font-weight: 500;
+  transition: 0.5s !important;
+  font-weight: 500 !important;
 }
 
 .bg-purple-gradient {
@@ -332,7 +332,7 @@ h6,
     border-top: 1px solid #eee;
   }
 }
-.team_img{
+.team_img {
   height: 290px;
   width: 100%;
   object-fit: cover;
@@ -340,7 +340,7 @@ h6,
 }
 
 @media (min-width: 992px) {
-  .team_img{
+  .team_img {
     height: 230px;
     width: 100%;
     object-fit: cover;
@@ -424,9 +424,9 @@ h6,
   background: linear-gradient(to left, #9e1b35 7%, #9e1b35 0%);
 }
 .company_01 img {
-  height: 100px;
+  height: 100px !important;
   object-fit: contain;
-  padding: 8px;
+  padding: 8px !important;
 }
 
 .company_01 img:hover {
@@ -459,8 +459,6 @@ h6,
   background-color: #fff;
 }
 
-
-
 .testimonial-carousel .owl-nav {
   position: absolute;
   bottom: -31px;
@@ -481,9 +479,9 @@ h6,
   justify-content: center;
   color: var(--secondary);
   border-radius: 55px;
-  box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
   font-size: 25px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
@@ -492,19 +490,18 @@ h6,
   color: var(--bs-white);
 }
 
-
 .c_btn {
-  background-color: var(--red);
-  border: solid 1px var(--bs-white);
-  color: var(--bs-white);
+  background-color: var(--red) !important;
+  border: solid 1px var(--bs-white) !important;
+  color: var(--bs-white) !important;
   /* border-radius: 0; */
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .c_btn:hover {
-  color: var(--dark);
-  background-color: var(--bs-white);
-  border: 1px solid var(--red);
+  color: var(--dark) !important;
+  background-color: var(--bs-white) !important;
+  border: 1px solid var(--red) !important;
 }
 
 .c_btn i {
@@ -626,12 +623,12 @@ h6,
   justify-content: center;
   align-items: center;
   right: 30px;
-  bottom: 50px;
+  bottom: 50px !important;
   z-index: 99;
-  font-size: 16px;
+  font-size: 16px !important;
   width: 48px;
   height: 48px;
-  border: solid 1px var(--grey);
+  border: solid 1px var(--grey) !important;
   background-color: var(--red) !important;
   color: var(--bs-white) !important;
 }
@@ -880,10 +877,10 @@ h6,
   color: var(--red);
 }
 .programBox .accordion-button::after {
-  /* background-image: url("../images/dypatil/logo/accordianPlus.png"); */
+  background-image: url("../public/images/dypatil/logo/accordianPlus.png");
 }
 .programBox .accordion-button:not(.collapsed)::after {
-  /* background-image: url("../images/dypatil/logo/accordianMinus.png"); */
+  background-image: url("../public/images/dypatil/logo/accordianMinus.png");
 }
 .programBox .accordion-item {
   background-color: transparent;
@@ -1079,7 +1076,7 @@ span.horizontalLine_01 {
 .SubChildTabContent .accordion-button:not(.collapsed)::after,
 .mobilePrograms .accordion-button:not(.collapsed)::after {
   transform: rotate(0deg);
-  /* background-image: url(../src/images/dypatil/about/1.mp4); */
+  background-image: url("../public/images/dypatil/about/1.mp4");
   background-size: 10px 10px !important;
   background-color: #fff;
   background-size: contain;
@@ -1091,7 +1088,7 @@ span.horizontalLine_01 {
 
 .SubChildTabContent .accordion-button::after,
 .mobilePrograms .accordion-button::after {
-  /* background-image: url(../images/dypatil/programs/arrow1.png); */
+  background-image: url("../public/images/dypatil/programs/arrow1.png");
   background-size: 15px 20px !important;
   background-color: #fff;
   background-size: contain;
@@ -1216,9 +1213,8 @@ span.horizontalLine_01 {
   background-position: top;
   background-size: cover;
   background-color: #000000ab;
-
 }
-.internmg img{
+.internmg img {
   filter: invert();
 }
 .why_02 .choose_us_sect {
@@ -1292,41 +1288,39 @@ span.horizontalLine_01 {
 
 /* /////// pranali mam */
 
-.galleryimages img{
+.galleryimages img {
   object-fit: cover;
   height: 130px;
   width: 100%;
 }
 
-.job_profilebox{
-  width:100%;
+.job_profilebox {
+  width: 100%;
 }
 
-.job_profilebox ul li{
+.job_profilebox ul li {
   list-style-type: none;
-  margin-left:-25px;
-  color:var(--bs-white);
+  margin-left: -25px;
+  color: var(--bs-white);
   margin-bottom: 6px;
 }
 
-.jobhr{
+.jobhr {
   border-bottom: 1px solid var(--bs-white);
   opacity: 1;
 }
 
-.industryhr{
+.industryhr {
   border-bottom: 1px solid var(--dark);
   opacity: 1;
 }
 
-.industryimages img
-{
+.industryimages img {
   object-fit: contain;
   height: 70px;
   width: 100%;
   aspect-ratio: 4 / 3;
 }
-
 
 .side-by-side {
   display: flex;
@@ -1363,11 +1357,9 @@ span.horizontalLine_01 {
   height: 100%;
 }
 
-
-
 .card {
-  background-color: var(--red);
-  border-radius: 0px;
+  background-color: var(--red) !important;
+  border-radius: 0px !important;
 }
 
 .card-title {
@@ -1375,7 +1367,7 @@ span.horizontalLine_01 {
   text-align: center;
   font-size: 18px;
 }
-.why_ph_img{
+.why_ph_img {
   height: 300px;
 }
 
@@ -1447,8 +1439,8 @@ span.horizontalLine_01 {
   /* border-radius: 100px; */
 }
 .testimonial-item {
-  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-  transition: .5s;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  transition: 0.5s;
 }
 .testimonial-item:hover {
   background: var(--red);
@@ -1458,7 +1450,6 @@ span.horizontalLine_01 {
   color: white !important;
 }
 @media (min-width: 992px) {
-
   .testimonial-carousel .owl-nav {
     bottom: 0;
   }
@@ -1469,21 +1460,21 @@ span.horizontalLine_01 {
 
   .testimonial-carousel .owl-nav .owl-prev,
   .testimonial-carousel .owl-nav .owl-next {
-      margin: 0 7px;
-      width: 45px;
-      height: 45px;
-      font-size: 20px;
+    margin: 0 7px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
   }
   .testimonial-carousel .owl-nav {
     right: unset;
     bottom: 20%;
     left: -45%;
     justify-content: unset;
-}
+  }
   .advisor {
     height: 285px;
-      object-position: top;
-      object-fit: contain;
+    object-position: top;
+    object-fit: contain;
   }
   .internship-devider {
     border-bottom: unset;
@@ -1491,11 +1482,10 @@ span.horizontalLine_01 {
   }
 }
 
-
 .placement_01 .company_01 {
-  display: flex;
+  display: flex !important;
   align-items: stretch;
-  width:100%;
+  width: 100% !important;
 }
 
 .placement_01 .company_01 .bg-white {
@@ -1505,7 +1495,7 @@ span.horizontalLine_01 {
   justify-content: center;
 }
 /* /////// pranali mam */
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
@@ -1735,29 +1725,29 @@ a:hover{
 
 @media (min-width: 600px) {
   .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 19.2px;
-    padding-right: 19.2px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 19.2px !important;
+    padding-right: 19.2px !important;
   }
 }
 
 @media (min-width: 1100px) {
   .container {
-    max-width: 1280px;
-    width: 1180px;
+    max-width: 1280px !important;
+    width: 1180px !important;
     /* padding-left: 2rem;
     padding-right: 2rem; */
   }
 }
-.team .card-title{
+.team .card-title {
   text-transform: uppercase;
 }
 
 @media (min-width: 1600px) {
   .team_img {
     height: 350px;
-}
+  }
   .programImg {
     height: 650px;
   }
@@ -1771,8 +1761,8 @@ a:hover{
     background: linear-gradient(to left, #ffffff 3%, #9e1b35 0%);
   }
   .container {
-    max-width: 1600px;
-    width: 1500px;
+    max-width: 1600px !important;
+    width: 1500px !important;
   }
   .bg_red_grad h2 {
     text-align: center;
@@ -1787,8 +1777,8 @@ a:hover{
     left: -54px;
   }
   .container {
-    max-width: 1920px;
-    width: 1820px;
+    max-width: 1920px !important;
+    width: 1820px !important;
   }
 }
 
@@ -1803,18 +1793,18 @@ a:hover{
     height: 450px;
   }
 }
-.justify{
+.justify {
   text-align: justify;
 }
 
 @media (min-width: 992px) {
-  .galleryimages img{
+  .galleryimages img {
     height: 240px;
   }
-  
-.why_ph_img{
-  height: 440px;
-}
+
+  .why_ph_img {
+    height: 440px;
+  }
   .box_shadow img {
     height: 45px;
     width: unset;
@@ -1926,7 +1916,7 @@ a:hover{
   }
 
   .left_button {
-    display: none;
+    display: none !important;
   }
 
   .placement_01 .owl-nav .owl-prev,
@@ -1961,9 +1951,9 @@ a:hover{
   }
 
   .company_01 img {
-    height: 80px;
+    height: 80px !important;
     aspect-ratio: 16 / 9;
-    padding: 6px;
+    padding: 6px !important;
   }
 
   .zoho_form {
@@ -2023,7 +2013,7 @@ a:hover{
 @media (min-width: 1600px) {
   .galleryimages img {
     height: 360px;
-}
+  }
   .pb_01 {
     padding: 2rem 0 10rem 1rem;
   }
@@ -2193,40 +2183,36 @@ a:hover{
 @media (max-width: 991px) {
   .programImgBox {
     position: static;
-    top: 0px;    
+    top: 0px;
   }
   .programCard1 {
     top: 30px;
-    padding-bottom:120px;
+    padding-bottom: 120px;
   }
   .programCard2 {
     top: 85px;
-    padding-bottom:80px;
+    padding-bottom: 80px;
   }
   .programCard3 {
     top: 140px;
-    padding-bottom:60px;
+    padding-bottom: 60px;
   }
   .programCard4 {
     top: 195px;
-    padding-bottom:60px;
+    padding-bottom: 60px;
   }
   .programCard5 {
     top: 330px;
-  }  
+  }
 }
 /* shubhamzz - END */
 
-
-
-@media only screen and (max-width: 1282px) and (min-width: 1280px){
-.cta-rt{
-  margin-right: 15px !important;
-}
+@media only screen and (max-width: 1282px) and (min-width: 1280px) {
+  .cta-rt {
+    margin-right: 15px !important;
+  }
 }
 
-.ctasize{
+.ctasize {
   font-size: 20px;
 }
-
-

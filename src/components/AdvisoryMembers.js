@@ -97,7 +97,7 @@ function AdvisoryMembers() {
           {members.map((member, index) => (
             <div key={index} className="card d-grid">
               <img
-                src={`${url}images/dypatil/team/${index}.webp`}
+                src={`${url}images/dypatil/team/${index+1}.webp`}
                 className="team_img"
                 alt={`${member[0]}`}
               />

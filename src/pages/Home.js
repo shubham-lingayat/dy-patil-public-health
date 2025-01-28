@@ -25,7 +25,7 @@ function Home() {
   return (
     <div>
       {/* header */}
-      <div className="container-fluid h_nav sticky-top">
+      <div className="container-fluid h_nav sticky-top top_01 shadow">
         <div className="container">
           <nav className="navbar navbar-expand-lg  navbar-light">
             <a href={`${url}`} className="navbar-brand">
@@ -206,7 +206,7 @@ function Home() {
                 loop
               >
                 <source
-                  src="../src/images/dypatil/about/1.mp4"
+                  src={`${url}images/dypatil/about/1.mp4`}
                   type="video/mp4"
                 />
               </video>
@@ -345,7 +345,7 @@ function Home() {
       {/* <!-- Back to Top --> */}
       <a
         href={`${url}`}
-        className="btn btn-lg bg-dark text-white btn-lg-square rounded-circle back-to-top"
+        className="btn btn-lg text-white btn-lg-square rounded-circle back-to-top"
       >
         <i className="bi bi-arrow-up"></i>
       </a>
