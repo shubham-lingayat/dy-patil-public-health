@@ -141,7 +141,7 @@ function Home() {
                 <iframe
                   title="hero section"
                   aria-label="DY PATIL NAVI MUMBAI 2025 - Public Health"
-                  frameborder="0"
+                  frameBorder="0"
                   className="zoho_form"
                   src="https://forms.zohopublic.in/gladowlwebsolutionspvtltd/form/DYPATILNAVIMUMBAI2025PublicHealth/formperma/UJUsLQSjB90cQCfOhyAYojtaVxecxURtZvczgZZpFaM"
                 ></iframe>
@@ -201,7 +201,7 @@ function Home() {
                 width="320"
                 height="240"
                 controls
-                autoplay
+                autoPlay
                 muted
                 loop
               >
@@ -367,7 +367,7 @@ function Home() {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -399,7 +399,7 @@ function Home() {
               <iframe
                 title="1"
                 aria-label="DY PATIL NAVI MUMBAI 2025 - Public Health"
-                frameborder="0"
+                frameBorder="0"
                 className="zoho_form"
                 src="https://forms.zohopublic.in/gladowlwebsolutionspvtltd/form/DYPATILNAVIMUMBAI2025PublicHealth/formperma/UJUsLQSjB90cQCfOhyAYojtaVxecxURtZvczgZZpFaM"
               ></iframe>

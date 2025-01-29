@@ -6,12 +6,11 @@ import ThankYou from "./pages/ThankYou";
 function App() {
   return (
     <div>
-
       {/* Defining Routes by Neasted Routes */}
       <Routes>
-          <Route index element={<Home />} />
-          <Route path="/thankyou" element={<ThankYou />} />
-          <Route path="*" element={<Home />} />
+        <Route index element={<Home />} />
+        <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
