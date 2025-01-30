@@ -22,6 +22,57 @@ function Home() {
     });
   }, []);
 
+  // Navbar JS - START ----------------------------------------------------------------------------------------------------------------
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      // Add or remove shadow from sticky navbar
+      const navbar = document.querySelector(".sticky-top");
+      if (navbar) {
+        if (scrollTop > 300) {
+          navbar.classList.add("shadow", "top_01");
+        } else {
+          navbar.classList.remove("shadow");
+        }
+      }
+
+      // Show or hide back-to-top button
+      const backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        if (scrollTop > 100) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      }
+    };
+
+    // Scroll to top function
+    const scrollToTop = (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Attach click event listener to back-to-top button
+    const backToTopButton = document.querySelector(".back-to-top");
+    if (backToTopButton) {
+      backToTopButton.addEventListener("click", scrollToTop);
+    }
+
+    // Cleanup event listeners on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (backToTopButton) {
+        backToTopButton.removeEventListener("click", scrollToTop);
+      }
+    };
+  }, []);
+  // Navbar JS - END ----------------------------------------------------------------------------------------------------------------
+
   return (
     <div>
       {/* header */}
@@ -351,7 +402,7 @@ function Home() {
       </a>
       <a
         href="#programs"
-        className="btn c_btn rounded-pill px-4 left_button bg-red"
+        className="btn c_btn  px-4 left_button bg-red"
       >
         Programs
       </a>

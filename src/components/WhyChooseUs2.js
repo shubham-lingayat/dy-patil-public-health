@@ -27,21 +27,15 @@ function WhyChooseUs2() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         },
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 0,
-        settings: {
           slidesToShow: 2,
         },
-      },
+      }
     ],
   };
 
@@ -68,7 +62,7 @@ function WhyChooseUs2() {
           <div key={index} className="company_01 p-2 d-flex align-items-stretch">
             <div className="bg-white p-2 d-flex flex-column justify-content-center">
               <img
-                src={`${url}images/dypatil/awards/${index}.webp`}
+                src={`${url}images/dypatil/awards/${index+1}.webp`}
                 loading="lazy"
                 className="px-3"
                 alt={`${value}`}

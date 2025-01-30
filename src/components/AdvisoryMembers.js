@@ -40,12 +40,13 @@ function AdvisoryMembers() {
   ];
 
   const members_01 = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     speed: 500,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    margin: 20,
     draggable: true,
     swipe: true,
     swipeToSlide: true,
@@ -61,13 +62,13 @@ function AdvisoryMembers() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -80,7 +81,7 @@ function AdvisoryMembers() {
   };
 
   return (
-    <section className="bg-white py-5 pt_001">
+    <section className="bg-white py-4 py-lg-5 pt_001">
       <div className="container" id="team">
         <div className="row justify-content-lg-between">
           <div className="col-lg-12  text-center">
@@ -92,7 +93,7 @@ function AdvisoryMembers() {
             <h2 className="title_01 mb-3">Meet Our Expert Advisory Members</h2>
           </div>
         </div>
-        <Slider className="members_01 row pt-3 team bg-white" {...members_01}>
+        <Slider className="members_01 row pt-lg-3 team bg-white" {...members_01}>
           {/* Map Function START */}
           {members.map((member, index) => (
             <div key={index} className="card d-grid">

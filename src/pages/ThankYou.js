@@ -1,5 +1,5 @@
 import React from "react";
-// import '../pages/ThankYou.css';
+import '../pages/ThankYou.css';
 import { useEffect, useRef } from "react";
 
 function ThankYou() {
@@ -92,7 +92,7 @@ function ThankYou() {
   // Bouncing Ball Animation - END
  
   return (
-    <div>
+    <div className="thankyou_01">
       <canvas ref={canvasRef} className="grey darken-4" />
       <div className="tankyou">
           <div className="logo"><img src={`${url}images/dypatil/logo/thankyou.webp`} alt="logo"/> </div>

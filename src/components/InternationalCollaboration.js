@@ -4,7 +4,7 @@ import Slider from "react-slick";
 function InternationalCollaboration() {
   const url = process.env.REACT_APP_URL || "#";
 
-  const collaboration = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const collaboration = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
   const collaboration_01 = {
     autoplay: true,
@@ -28,21 +28,15 @@ function InternationalCollaboration() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         },
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 0,
-        settings: {
           slidesToShow: 2,
         },
-      },
+      }
     ],
   };
 

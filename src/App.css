@@ -403,9 +403,6 @@ h6,
   object-fit: contain;
 }
 
-.btn_font {
-  font-size: 10px !important;
-}
 
 .box_shadow img {
   height: 55px;
@@ -427,6 +424,7 @@ h6,
   height: 100px !important;
   object-fit: contain;
   padding: 8px !important;
+  width: 100%;
 }
 
 .company_01 img:hover {
@@ -498,6 +496,9 @@ h6,
   font-size: 14px !important;
 }
 
+.btn_font {
+  font-size: 10px !important;
+}
 .c_btn:hover {
   color: var(--dark) !important;
   background-color: var(--bs-white) !important;
@@ -1162,7 +1163,7 @@ p.textBrown1 {
 
 .modal-header {
   position: relative;
-  padding: 20px;
+  padding: 20px !important;
 }
 
 .modal-header .about_logo {
@@ -1172,7 +1173,7 @@ p.textBrown1 {
 }
 
 .navbar-toggler {
-  padding: 5px;
+  padding: 5px !important;
 }
 
 .navbar-toggler:focus {
@@ -1181,8 +1182,8 @@ p.textBrown1 {
 }
 
 .navbar-toggler-icon {
-  width: 20px;
-  height: 20px;
+  width: 20px !important;
+  height: 20px !important;
 }
 
 .px_01 {
@@ -2180,6 +2181,10 @@ a:hover {
   position: sticky;
   top: 360px;
 }
+
+.members_01  .slick-slide{
+  padding: 10px;
+}
 @media (max-width: 991px) {
   .programImgBox {
     position: static;
@@ -2204,6 +2209,17 @@ a:hover {
   .programCard5 {
     top: 330px;
   }
+  .members_01 .slick-slide {
+    padding: 30px;
+}
+.advertise_01 h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+}
+
+.btn:focus{
+  box-shadow: unset !important;
 }
 /* shubhamzz - END */
 
@@ -2215,4 +2231,10 @@ a:hover {
 
 .ctasize {
   font-size: 20px;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+  }
 }

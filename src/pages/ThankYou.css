@@ -1,42 +1,41 @@
-body {
+.thankyou_01 {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     background: #fff;
-
 }
 
-img {
+.thankyou_01 img {
     max-width: 100%
 }
 
-#canvas {
+.thankyou_01 #canvas {
     width: 100%;
     height: 100%;
 }
 
-.text span {
+.thankyou_01 .text span {
     font-weight: 500;
 }
 
-.btn {
+.thankyou_01 .btn {
     margin: 40px auto 0;
     width: 200px;
     position: relative;
 }
 
-.text span.complete {
+.thankyou_01 .text span.complete {
     font-weight: bold;
     margin: 19px 0 7px;
     display: inline-block;
     font-size: 30px;
 }
 
-.btn::before {
+.thankyou_01 .btn::before {
     content: "";
     margin: 40px auto 0;
     width: 73px;
     /* background-image: url("../../public/images/dypatil/logo/4.webp"); */
-    /* cap image */
+    /* cap image for button */
     position: absolute;
     left: -55px;
     bottom: -5px;
@@ -45,7 +44,7 @@ img {
     background-repeat: no-repeat;
 }
 
-.text {
+.thankyou_01 .text {
     font-size: 24px;
     line-height: 30px;
     text-align: center;
@@ -54,7 +53,7 @@ img {
     width:125%;
 }
 
-.tankyou {
+.thankyou_01 .tankyou {
     max-width: 700px;
     margin: auto;
     position: absolute;
@@ -63,7 +62,7 @@ img {
     top: 50%;
 }
 
-.logo {
+.thankyou_01 .logo {
     width: 220px;
     margin: 0 auto 40px;
     position: relative;
@@ -72,7 +71,7 @@ img {
     padding: 12px;
 }
 
-.cong {
+.thankyou_01 .cong {
     width: 275px;
     margin: 0 auto 20px;
     position: relative;
@@ -104,12 +103,12 @@ bottom: -100px;
 */
 
 @media screen and (min-width:320px) and (max-width:850px) {
-    .text {
+    .thankyou_01 .text {
         width: 97% !important;
     }
 }
 
-.btn a {
+.thankyou_01 .btn a {
     background: #EB731E;
     color: #fff;
     text-decoration: none;
@@ -120,18 +119,18 @@ bottom: -100px;
     font-weight: bold;
 }
 
-.btn a:hover {
+.thankyou_01 .btn a:hover {
     background: #1a1a1a;
 }
 
 @media screen and (max-width:480px) {
-    .text span.complete {
+    .thankyou_01 .text span.complete {
 
         font-size: 26px;
         line-height: 25px;
     }
 
-    .text {
+    .thankyou_01 .text {
         font-size: 15px;
         text-align: center;
         font-weight: 100;

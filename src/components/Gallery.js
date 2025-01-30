@@ -5,7 +5,7 @@ function Gallery() {
   const gallery = [1, 2, 3, 4, 5, 6];
 
   return (
-    <section className="bg-white pt-lg-1 pt-5">
+    <section className="bg-white pt-lg-1 pt-0">
       <div className="container" id="campuslife">
         <div className="col-md-12 text-center position-relative">
           <img
